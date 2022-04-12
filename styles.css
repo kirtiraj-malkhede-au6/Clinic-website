@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  width: auto;
+}
+html {
+  font-size: 62.5%;
+}
+ul,
+button,
+a {
+  border-style: none;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* top subnavbar css design */
+.nav-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+.subnav {
+  padding: 1vmin 3vmin;
+  width: 100vw;
+  font-size: 2.5vmin;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(187, 245, 255);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3vmin;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .subnav {
+    gap: 1vmin;
+  }
+}
+.email-box,
+.contact-box {
+  margin-left: 1rem;
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-box i {
+  transform: rotate(90deg);
+}
+
+/* navbar css */
+.navbar {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background: white;
+}
+.logo-box {
+  height: 12em;
+  width: 26em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.logo-box img {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+}
+.logo-box span {
+  margin-left: -10%;
+  font-size: 4rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  color: #0099e5;
+}
+.nav-link {
+  padding: 1rem;
+  font-size: 3vmin;
+  font-weight: 600;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(233, 250, 255),
+    -0.5rem -0.5rem 1rem rgb(255, 255, 255);
+  display: none;
+}
+.nav-link li a {
+  color: #0099e5;
+}
+/* hambuger menu css */
+.hambuger-menu {
+  margin-right: 2rem;
+  font-size: 4rem;
+}
+
+/* landing page main body */
+.welcome-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #eff3f5;
+}
+.booking-content {
+  padding: 10%;
+  height: 100%;
+  width: 100vw;
+  background-image: url("./images/chiropractor.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8%;
+}
+.booking-content h1 {
+  padding: 1rem;
+  width: fit-content;
+  font-weight: 900;
+  font-size: 8vmin;
+  letter-spacing: 1px;
+  background: #f2faff73;
+}
+.booking-content button {
+  padding: 1rem;
+  font-size: 4vmin;
+  width: fit-content;
+  font-weight: bolder;
+  color: #0099e5;
+}
+/* footer bar css */
+.footer-container {
+  padding: 4vmin 1vmin;
+  position: fixed;
+  right: 0px;
+  bottom: 10rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5vmin;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  background-color: rgb(238, 243, 244);
+}
+
+.footer-container a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-container a i {
+  font-size: 4vmin;
+}
+.footer-container a span {
+  font-size: 2vmin;
+}
+/* mobile device responsiveness for footer navbar */
+@media (max-width: 767.98px) {
+  .footer-container {
+    padding: 0.5rem;
+    height: fit-content;
+    width: 100vw;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+  }
+  .footer-container a i {
+    font-size: 2.4rem;
+  }
+  .footer-container a span {
+    font-size: 1.8rem;
+  }
+  .image-box {
+    height: fit-content;
+  }
+  .card {
+    height: fit-content;
+    width: 400px;
+    height: 200px;
+  }
+}
+.treatments-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+  height: 35rem;
+  width: 50rem;
+}
+
+.image-box {
+  width: 120%;
+  height: 100%;
+}
+.image-box img {
+  height: 100%;
+  width: 100%;
+}
