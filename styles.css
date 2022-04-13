@@ -266,11 +266,11 @@ body {
     width: 100%;
   }
   .content h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 900;
   }
   .content span {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
 }
