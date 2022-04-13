@@ -252,16 +252,25 @@ body {
   .card {
     height: fit-content;
     margin: 5px;
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
     height: 25rem;
   }
   .imgage-box {
-    flex-grow: 3;
+    height: 23rem;
+    width: 100%;
+    background-color: #0099e5;
+  }
+  .image-box img {
+    padding: 0.5;
     height: 23rem;
     width: 100%;
   }
-  .image-box img {
-    height: 23rem;
-    width: 100%;
+  .content h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .content span {
+    font-size: 1em;
+    font-weight: 500;
   }
 }
