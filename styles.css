@@ -166,7 +166,7 @@ body {
   font-size: 4vmin;
 }
 
-.treatments-box {
+#treatments-box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -225,6 +225,111 @@ body {
   font-size: 3.5vmin;
   font-weight: bolder;
 }
+footer {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  border-top: 1px solid rgb(193, 193, 193);
+}
+.brandname {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255);
+  width: 40%;
+}
+.brandname h2 {
+  font-size: 4vmin;
+}
+.brandname h3 {
+  font-size: 3vmin;
+}
+.brandname span {
+  margin-top: 1rem;
+  font-size: 2.5vmin;
+}
+.social-media {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+.social-media i {
+  font-size: 4vmin;
+}
+.footer-links {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: 1rem;
+}
+.footer-links span {
+  font-size: 4vmin;
+  font-weight: 900;
+}
+.footer-links ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.footer-links ul li a {
+  font-size: 2.5vmin;
+}
+.contact-section {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255);
+  gap: 1.5rem;
+}
+.contact-section .heading {
+  font-size: 4vmin;
+  font-weight: 900;
+}
+.contact-section ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contact-section .address,
+.mobile,
+.phone,
+.mail {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5vmin;
+}
+.policy-section {
+  margin-bottom: 5rem;
+  padding: 1rem 12rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.policy-section span {
+  font-size: 2.5vmin;
+  text-align: center;
+  color: #004a50;
+  font-weight: 900;
+}
+
 /* 768px width screen mobile device responsiveness for footer navbar */
 @media (max-width: 767.98px) {
   .subnav {
@@ -253,7 +358,7 @@ body {
     height: fit-content;
     margin: 5px;
     padding: 0.5rem 0.5rem;
-    height: 25rem;
+    height: 24rem;
   }
   .imgage-box {
     height: 23rem;
