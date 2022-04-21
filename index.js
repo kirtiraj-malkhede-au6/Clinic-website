@@ -5,8 +5,7 @@ const treatmentData = [
     id: "sr01",
     treatmentName: "Alternative Care",
     image: "https://www.scsportstherapy.com/wp-content/uploads/cchhiirroo.jpg",
-    description:
-      "Less traditional treatments like acupuncture, alexander technique,and pneumatic vests can be used to treat back or neck pain.",
+    description: `Less traditional treatments like acupuncture, alexander technique,and pneumatic vests can be used to treat back or neck pain.`,
   },
   {
     id: "sr02",
@@ -56,3 +55,48 @@ const treatmentList = () => {
   );
 };
 treatmentList();
+
+const photoGallery = [
+  {
+    image: "https://www.humanmechanic.in/images/gallery/1.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/2.jpg",
+  },
+
+  {
+    image: "https://www.humanmechanic.in/images/gallery/7.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/8.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/9.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/5.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/4.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/6.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/10.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/11.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/15.jpg",
+  },
+];
+const galleryList = () => {
+  document.getElementById("images").innerHTML = photoGallery.map((item) => {
+    return `<div class="image-box">
+      <img src="${item.image}" alt="">
+    </div>`;
+  });
+};
+galleryList();
