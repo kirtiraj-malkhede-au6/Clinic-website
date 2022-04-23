@@ -49,9 +49,16 @@ const treatmentData = [
 ];
 const treatmentList = () => {
   document.getElementById("treatments-box").innerHTML = treatmentData.map(
-    (item, index) => {
-      return `<div class="card"><div class="image-box"><img src="${item.image}" /></div><div class="content"><h1>${item.treatmentName}</h1><span>${item.description}</span></div></div>`;
-    }
+    (item) =>
+      `<div class="card">
+      <div class="image-box">
+      <img src="${item.image}" />
+      </div>
+      <div class="content">
+      <h1>${item.treatmentName}</h1>
+      <span>${item.description}</span>
+      </div>
+      </div>`
   );
 };
 treatmentList();
@@ -95,7 +102,7 @@ const photoGallery = [
 const galleryList = () => {
   document.getElementById("images").innerHTML = photoGallery.map((item) => {
     return `<div class="image-box">
-      <img src="${item.image}" alt="">
+      <img src="${item.image}">
     </div>`;
   });
 };
