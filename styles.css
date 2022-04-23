@@ -525,12 +525,12 @@ footer {
     flex-direction: column;
   }
   .map-container iframe {
-    width: 90vw;
-    height: 50vh;
+    width: 95vw;
+    height: 70vh;
   }
   .form-container {
-    width: 80vw;
-    height: 50vh;
+    width: 95vw;
+    height: 70vh;
   }
   .policy-section {
     padding: 1rem 4rem;
