@@ -394,7 +394,7 @@ footer {
   justify-content: flex-start;
   gap: 3rem;
 }
-.social-media i {
+.social-media a i {
   font-size: 4vmin;
 }
 .footer-links {
@@ -446,7 +446,7 @@ footer {
   gap: 1rem;
   justify-content: flex-start;
   align-items: center;
-  text-align: center;
+
   font-size: 2.5vmin;
 }
 .policy-section {
@@ -534,5 +534,46 @@ footer {
   }
   .policy-section {
     padding: 1rem 4rem;
+  }
+  footer .brandname {
+    padding: 0.5rem 1rem;
+  }
+  footer .brandname h2 {
+    font-size: 2rem;
+  }
+  footer .brandname h3 {
+    font-size: 1.5rem;
+  }
+  footer .brandname span {
+    font-size: 1.5rem;
+  }
+  .contact-section {
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+  }
+  .social-media a i {
+    font-size: 2.5rem;
+  }
+  .footer-links span {
+    font-size: 2rem;
+  }
+  .footer-links ul li a {
+    font-size: 1.5rem;
+  }
+  .contact-section .heading {
+    font-size: 2rem;
+  }
+  .contact-section .address,
+  .mobile,
+  .phone,
+  .mail {
+    font-size: 1.5rem;
+    gap: 2rem;
+  }
+  .contact-section .address i,
+  .mobile i,
+  .phone i,
+  .mail i {
+    font-size: 2rem;
   }
 }
