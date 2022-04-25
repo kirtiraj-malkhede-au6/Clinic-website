@@ -37,7 +37,7 @@ body {
   font-size: 2.5vmin;
   display: flex;
   flex-direction: row;
-  background-color: rgb(187, 245, 255);
+  background-color: rgb(255, 251, 253);
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
@@ -67,7 +67,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  background: white;
+  background: linear-gradient(45deg, #0099e5, #00fff7);
 }
 .logo-box {
   height: 12em;
@@ -85,31 +85,37 @@ body {
 .logo-box span {
   margin-left: -10%;
   font-size: 4rem;
-  font-weight: bolder;
-  letter-spacing: 1px;
-  color: #0099e5;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #000000;
 }
 .nav-link {
   padding: 1rem;
+  padding-right: 2rem;
   font-size: 3vmin;
   font-weight: 600;
   width: 40%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background: transparent;
-  box-shadow: 0.5rem 0.5rem 1rem rgb(233, 250, 255),
-    -0.5rem -0.5rem 1rem rgb(255, 255, 255);
+
+  /* box-shadow: 0.5rem 0.5rem 1rem rgb(233, 250, 255),
+    -0.5rem -0.5rem 1rem rgb(255, 255, 255); */
+  /* display: none; */
+}
+
+.menu-close-icon {
   display: none;
 }
 .nav-link li a {
-  color: #0099e5;
+  color: rgba(0, 0, 0, 0.6);
 }
 /* hambuger menu css */
 .hambuger-menu {
   margin-right: 2rem;
   font-size: 4rem;
+  display: none;
 }
 
 /* landing page main body */
@@ -464,12 +470,69 @@ footer {
 }
 
 /* 768px width screen mobile device responsiveness for footer navbar */
+@media (max-width: 1024.98px) {
+  .nav-link {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    font-size: 2.5rem;
+
+    background: linear-gradient(45deg, #0099e5, #00fff7);
+  }
+  .nav-link li a {
+    color: black;
+  }
+}
 @media (max-width: 767.98px) {
   .subnav {
     gap: 1vmin;
     font-size: 3.5vmin;
   }
-  .navbar .logo-box a img {
+  .nav-link {
+    padding-left: 1rem;
+    position: fixed;
+    top: 0;
+    right: -1000%;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #0099e5, #00fff7);
+  }
+  .hambuger-menu {
+    display: block;
+  }
+  .menu-close-icon {
+    display: block;
+  }
+  .nav-link.active {
+    right: 0;
+  }
+
+  #navlink-close-icon {
+    margin: 1rem 1.5rem;
+    font-size: 3rem;
+  }
+  .nav-link span {
+    /* height: 5rem;
+    width: 5rem; */
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    background-color: #dbfafa;
+  }
+  .nav-link li a {
+    color: black;
+  }
+
+  .nav-link .navbar .logo-box a img {
     height: 8rem;
     width: 8rem;
   }
@@ -531,6 +594,9 @@ footer {
   .form-container {
     width: 95vw;
     height: 70vh;
+  }
+  .form-container form {
+    justify-content: space-around;
   }
   .policy-section {
     padding: 1rem 4rem;

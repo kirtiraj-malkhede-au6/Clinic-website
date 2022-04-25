@@ -48,9 +48,10 @@ const treatmentData = [
   },
 ];
 const treatmentList = () => {
-  document.getElementById("treatments-box").innerHTML = treatmentData.map(
-    (item) =>
-      `<div class="card">
+  document.getElementById("treatments-box").innerHTML = treatmentData
+    .map(
+      (item) =>
+        `<div class="card">
       <div class="image-box">
       <img src="${item.image}" />
       </div>
@@ -59,7 +60,8 @@ const treatmentList = () => {
       <span>${item.description}</span>
       </div>
       </div>`
-  );
+    )
+    .join("");
 };
 treatmentList();
 
@@ -99,11 +101,26 @@ const photoGallery = [
     image: "https://www.humanmechanic.in/images/gallery/15.jpg",
   },
 ];
+
 const galleryList = () => {
-  document.getElementById("images").innerHTML = photoGallery.map((item) => {
-    return `<div class="image-box">
-      <img src="${item.image}">
-    </div>`;
-  });
+  document.getElementById("images").innerHTML = photoGallery
+    .map((item) => {
+      return `<div class="image-box">
+  <img src="${item.image}">
+</div>`;
+    })
+    .join("");
 };
 galleryList();
+
+const hamburger = document.querySelector(".hambuger-menu");
+const navMenu = document.querySelector(".nav-link");
+const navlinkClose = document.querySelector(".menu-close-icon");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+navlinkClose.addEventListener("click", () => {
+  navMenu.classList.remove("active");
+  console.log("clicked");
+});
