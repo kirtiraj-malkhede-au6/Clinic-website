@@ -498,7 +498,7 @@ footer {
     position: fixed;
     top: 0;
     right: -1000%;
-    height: 100vh;
+    height: calc(100vh - 4rem);
     width: 100vw;
     flex-direction: column;
     gap: 2rem;
@@ -532,12 +532,14 @@ footer {
     color: black;
   }
 
-  .nav-link .navbar .logo-box a img {
-    height: 8rem;
-    width: 8rem;
+  .logo-box img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
   }
+
   .navbar .logo-box span {
-    margin-left: -5%;
+    margin-left: -1.2rem;
     font-size: 3rem;
   }
   .footer-container {
@@ -582,6 +584,10 @@ footer {
     font-size: 1.2rem;
     font-weight: 500;
   }
+
+  .getin-touched {
+    padding: 2rem;
+  }
   .map-container {
     margin: 1rem;
 
@@ -593,10 +599,22 @@ footer {
   }
   .form-container {
     width: 95vw;
-    height: 70vh;
+    height: fit-content;
   }
   .form-container form {
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+  }
+  .form-container form div label {
+    width: 40%;
+  }
+  .form-container form div input {
+    width: 60%;
+  }
+  .form-container form div textarea {
+    width: 60%;
   }
   .policy-section {
     padding: 1rem 4rem;
