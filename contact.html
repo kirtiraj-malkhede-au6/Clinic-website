@@ -59,18 +59,6 @@
       <a href="#"><i class="fa-solid fa-calendar-check"></i></a>
       <a href="tel:+918888888888"><i class="fa-solid fa-phone"></i></a>
     </div>
-    <div class="welcome-container">
-      <div class="booking-content">
-        <h1>A one step ahead for full body pain relief</h1>
-        <button>Book Now</button>
-      </div>
-    </div>
-
-    <div class="heading-box">
-      <span>PAIN TREATMENTS</span><span>Specialities</span>
-    </div>
-
-    <container id="treatments-box"></container>
     <section class="getin-touched">
       <span class="name">Get In Touched</span>
       <span class="sub-name"
@@ -129,76 +117,20 @@
         </div>
       </div>
     </section>
-    <section class="gallery-section">
-      <span class="title">Gallery</span>
-      <container id="images"></container>
-    </section>
+    <script>
+      {
+        const hamburger = document.querySelector(".hambuger-menu");
+        const navMenu = document.querySelector(".nav-link");
+        const navlinkClose = document.querySelector(".menu-close-icon");
 
-    <footer>
-      <div class="brandname">
-        <h2>Bone Care Therapy</h2>
-        <h3>Chiropractic</h3>
-        <span
-          >Some people choose to see a chiropractor or osteopath for their back
-          pain. Both types of doctors believe that having a healthy spine is
-          very important for the overall health and integrity of the entire
-          body.</span
-        >
-        <div class="social-media">
-          <a href="facebook"><i class="fa-brands fa-facebook"></i></a>
-          <a href="instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="linkedin"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="footer-links">
-        <span>Links</span>
-        <ul>
-          <li><a href="home">Home</a></li>
-          <li><a href="aboutus">About Us</a></li>
-          <li><a href="treatments">Treatments</a></li>
-          <li><a href="gallery">Gallery</a></li>
-          <li><a href="">Appointment</a></li>
-        </ul>
-      </div>
-      <div class="contact-section">
-        <span class="heading">Contact-us</span>
-        <ul>
-          <li>
-            <span class="address"
-              ><i class="fa-solid fa-location-dot"></i
-              ><span>
-                Bhiwapur ward, near hanuman temple, Chandrapur, Maharashtra
-                442403</span
-              ></span
-            >
-          </li>
-
-          <li>
-            <span class="mobile"
-              ><i class="fa-solid fa-mobile-screen-button"></i
-              ><span>+919403874265</span></span
-            >
-          </li>
-          <li>
-            <span class="phone"
-              ><i class="fa-solid fa-phone"></i><span>+919403874265</span></span
-            >
-          </li>
-          <li>
-            <span class="mail"
-              ><i class="fa-solid fa-envelope"></i
-              ><span>username@email.com</span></span
-            >
-          </li>
-        </ul>
-      </div>
-    </footer>
-    <div class="policy-section">
-      <span
-        >© 2022 Bone Care Therapy (Chiropractic). All Rights Reserved | Design
-        By Y-tech solutions pvt ltd.
-      </span>
-    </div>
-    <script src="./index.js"></script>
+        hamburger.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+        });
+        navlinkClose.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          console.log("clicked");
+        });
+      }
+    </script>
   </body>
 </html>
