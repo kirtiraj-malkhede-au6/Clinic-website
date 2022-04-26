@@ -1,4 +1,14 @@
-"strict mode";
+const hamburger = document.querySelector(".hambuger-menu");
+const navMenu = document.querySelector(".nav-link");
+const navlinkClose = document.querySelector(".menu-close-icon");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+navlinkClose.addEventListener("click", () => {
+  navMenu.classList.remove("active");
+  console.log("clicked");
+});
 
 const treatmentData = [
   {
@@ -112,15 +122,3 @@ const galleryList = () => {
     .join("");
 };
 galleryList();
-
-const hamburger = document.querySelector(".hambuger-menu");
-const navMenu = document.querySelector(".nav-link");
-const navlinkClose = document.querySelector(".menu-close-icon");
-
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-navlinkClose.addEventListener("click", () => {
-  navMenu.classList.remove("active");
-  console.log("clicked");
-});

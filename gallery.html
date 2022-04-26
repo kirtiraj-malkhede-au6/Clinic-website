@@ -63,67 +63,6 @@
       <span class="title">Gallery</span>
       <container id="images"></container>
     </section>
-
-    <script>
-      const photoGallery = [
-        {
-          image: "https://www.humanmechanic.in/images/gallery/1.jpg",
-        },
-        {
-          image: "https://www.humanmechanic.in/images/gallery/2.jpg",
-        },
-
-        {
-          image: "https://www.humanmechanic.in/images/gallery/7.jpg",
-        },
-        {
-          image: "https://www.humanmechanic.in/images/gallery/8.jpg",
-        },
-        {
-          image: "https://www.humanmechanic.in/images/gallery/9.jpg",
-        },
-        {
-          image: "https://www.humanmechanic.in/images/gallery/5.jpg",
-        },
-        {
-          image: "https://www.humanmechanic.in/images/gallery/4.jpg",
-        },
-        {
-          image: "https://www.humanmechanic.in/images/gallery/6.jpg",
-        },
-        {
-          image: "https://www.humanmechanic.in/images/gallery/10.jpg",
-        },
-        {
-          image: "https://www.humanmechanic.in/images/gallery/11.jpg",
-        },
-        {
-          image: "https://www.humanmechanic.in/images/gallery/15.jpg",
-        },
-      ];
-
-      const galleryList = () => {
-        document.getElementById("images").innerHTML = photoGallery
-          .map((item) => {
-            return `<div class="image-box">
-  <img src="${item.image}">
-</div>`;
-          })
-          .join("");
-      };
-      galleryList();
-
-      const hamburger = document.querySelector(".hambuger-menu");
-      const navMenu = document.querySelector(".nav-link");
-      const navlinkClose = document.querySelector(".menu-close-icon");
-
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-      navlinkClose.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-        console.log("clicked");
-      });
-    </script>
   </body>
+  <script src="index.js"></script>
 </html>
