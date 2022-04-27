@@ -1,3 +1,4 @@
+const bodyID = document.body.id;
 const hamburger = document.querySelector(".hambuger-menu");
 const navMenu = document.querySelector(".nav-link");
 const navlinkClose = document.querySelector(".menu-close-icon");
@@ -9,6 +10,58 @@ navlinkClose.addEventListener("click", () => {
   navMenu.classList.remove("active");
   console.log("clicked");
 });
+
+const photoGallery = [
+  {
+    image: "https://www.humanmechanic.in/images/gallery/1.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/2.jpg",
+  },
+
+  {
+    image: "https://www.humanmechanic.in/images/gallery/7.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/8.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/9.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/5.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/4.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/6.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/10.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/11.jpg",
+  },
+  {
+    image: "https://www.humanmechanic.in/images/gallery/15.jpg",
+  },
+];
+
+const galleryList = () => {
+  if (bodyID === "gallery" || bodyID === "home") {
+    console.log(bodyID);
+    document.getElementById("images").innerHTML = photoGallery
+      .map((item) => {
+        return `<div class="image-box">
+<img src="${item.image}">
+</div>`;
+      })
+      .join("");
+  }
+  return;
+};
+galleryList();
 
 const treatmentData = [
   {
@@ -57,11 +110,14 @@ const treatmentData = [
       "Chiropractic treatment may include physiologic therapeutics,exercise, nutrition, and posture along with the traditional spine adjustments.",
   },
 ];
+
 const treatmentList = () => {
-  document.getElementById("treatments-box").innerHTML = treatmentData
-    .map(
-      (item) =>
-        `<div class="card">
+  if (bodyID === "treatments" || bodyID === "home") {
+    console.log(bodyID);
+    document.getElementById("treatments-box").innerHTML = treatmentData
+      .map(
+        (item) =>
+          `<div class="card">
       <div class="image-box">
       <img src="${item.image}" />
       </div>
@@ -70,55 +126,9 @@ const treatmentList = () => {
       <span>${item.description}</span>
       </div>
       </div>`
-    )
-    .join("");
+      )
+      .join("");
+  }
+  return;
 };
 treatmentList();
-
-const photoGallery = [
-  {
-    image: "https://www.humanmechanic.in/images/gallery/1.jpg",
-  },
-  {
-    image: "https://www.humanmechanic.in/images/gallery/2.jpg",
-  },
-
-  {
-    image: "https://www.humanmechanic.in/images/gallery/7.jpg",
-  },
-  {
-    image: "https://www.humanmechanic.in/images/gallery/8.jpg",
-  },
-  {
-    image: "https://www.humanmechanic.in/images/gallery/9.jpg",
-  },
-  {
-    image: "https://www.humanmechanic.in/images/gallery/5.jpg",
-  },
-  {
-    image: "https://www.humanmechanic.in/images/gallery/4.jpg",
-  },
-  {
-    image: "https://www.humanmechanic.in/images/gallery/6.jpg",
-  },
-  {
-    image: "https://www.humanmechanic.in/images/gallery/10.jpg",
-  },
-  {
-    image: "https://www.humanmechanic.in/images/gallery/11.jpg",
-  },
-  {
-    image: "https://www.humanmechanic.in/images/gallery/15.jpg",
-  },
-];
-
-const galleryList = () => {
-  document.getElementById("images").innerHTML = photoGallery
-    .map((item) => {
-      return `<div class="image-box">
-  <img src="${item.image}">
-</div>`;
-    })
-    .join("");
-};
-galleryList();
