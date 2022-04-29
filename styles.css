@@ -527,12 +527,12 @@ footer {
   margin-top: 4rem;
   margin-inline: auto;
   padding: 2rem;
-  height: 40rem;
+  height: 38rem;
   width: 30rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f6f8f9;
+  background-color: #f3f3f3;
 }
 .success-container .success-icon-box {
   height: 15rem;
@@ -542,6 +542,21 @@ footer {
   margin: 2rem;
   font-size: 11rem;
   color: #0099e5;
+  transition: transform 0.5s ease-in-out;
+  animation: pop-up 1s ease-in-out forwards infinite reverse;
+}
+.success-container:hover .success-icon-box i {
+  animation-play-state: paused;
+}
+@keyframes pop-up {
+  0% {
+    transform: scale(1);
+    color: #0099e5;
+  }
+  100% {
+    transform: scale(1.1);
+    color: rgb(45, 220, 115);
+  }
 }
 .success-container .success-heading {
   font-size: 3rem;
@@ -555,7 +570,7 @@ footer {
   font-size: 1.2rem;
 }
 .success-container a {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 .success-container a button {
   padding: 0.5rem 1rem;
@@ -563,6 +578,10 @@ footer {
   font-weight: 600;
   color: rgb(255, 255, 255);
   background-color: #0099e5;
+  transition: transform 0.5s ease-in-out;
+}
+.success-container a button:hover {
+  transform: scale(1.1);
 }
 
 /* 768px width screen mobile device responsiveness for footer navbar */
