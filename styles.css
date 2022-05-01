@@ -309,11 +309,11 @@ body {
 
 .form-container {
   width: 30%;
-  height: 33rem;
+  /* height: 33rem; */
 }
 .form-container form {
   padding: 1.5rem 2rem;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -340,8 +340,16 @@ body {
   font-weight: 700;
   color: #004a50;
 }
-.form-container form div textarea,
-.form-container form div input {
+.form-container form small {
+  /* visibility: hidden; */
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ff005d;
+}
+
+.form-container form div .textarea,
+.form-container form div .input {
   all: unset;
   height: 4rem;
   width: 50%;
@@ -349,16 +357,18 @@ body {
   border: none;
   border-bottom: 2px solid rgb(54, 56, 56);
 }
-.form-container form div textarea {
+.form-container form div .textarea {
   /* border-top: 1px solid grey;
   border-left: 1px solid grey;
   border-right: 1px solid grey; */
   height: fit-content;
 }
-.form-container form div textarea:focus,
-.form-container form div input:focus {
+
+.form-container form div .textarea:focus,
+.form-container form div .input:focus {
   border-color: #0099e5;
 }
+
 .enq-submit-btn {
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
@@ -368,6 +378,14 @@ body {
   border-style: none;
   border: 1px solid black;
   box-shadow: 1px 1px 1rem rgb(235, 235, 235);
+}
+.form-container form div .textarea.success,
+.form-container form div .input.success {
+  border-bottom: 2px solid rgb(6, 222, 103);
+}
+.form-container form div .textarea.error,
+.form-container form div .input.error {
+  border-color: #ff005d;
 }
 footer {
   margin-bottom: 1rem;
@@ -543,19 +561,19 @@ footer {
   font-size: 11rem;
   color: #0099e5;
   transition: transform 0.5s ease-in-out;
-  animation: pop-up 1s ease-in-out forwards infinite reverse;
+  animation: pop-up 0.8s ease-in-out forwards infinite alternate-reverse;
 }
 .success-container:hover .success-icon-box i {
   animation-play-state: paused;
 }
 @keyframes pop-up {
   0% {
-    transform: scale(1);
-    color: #0099e5;
-  }
-  100% {
     transform: scale(1.1);
     color: rgb(45, 220, 115);
+  }
+  100% {
+    transform: scale(1);
+    color: rgb(92, 220, 143);
   }
 }
 .success-container .success-heading {
@@ -729,7 +747,7 @@ footer {
   .form-container form div input {
     width: 60%;
   }
-  .form-container form div textarea {
+  .form-container form div .textarea {
     width: 60%;
   }
   .policy-section {

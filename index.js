@@ -2,6 +2,16 @@ const bodyID = document.body.id;
 const hamburger = document.querySelector(".hambuger-menu");
 const navMenu = document.querySelector(".nav-link");
 const navlinkClose = document.querySelector(".menu-close-icon");
+const fullName = document.getElementById("fullname");
+const mobileNo = document.getElementById("mobileNo");
+const email = document.getElementById("emailid");
+const subject = document.getElementById("subject");
+const errorMessageFullName = document.getElementById("error-fullname");
+const errorMessageMobileNo = document.getElementById("error-mobileNo");
+const errorMessageEmailId = document.getElementById("error-emailId");
+const errorMessageSubject = document.getElementById("error-subject");
+const submitBtn = document.getElementById("submit-btn");
+let checkedFullName, checkedMobileNo, checkedEmailId, checkedSubject;
 
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
@@ -132,3 +142,121 @@ const treatmentList = () => {
   return;
 };
 treatmentList();
+
+const setError = (
+  inputElement,
+  validateClass,
+  feedbackElement,
+  errorMessage
+) => {
+  if (inputElement.className === "textarea") {
+    inputElement.className = `textarea ${validateClass}`;
+    feedbackElement.innerHTML = `${errorMessage}`;
+  } else {
+    inputElement.className = `input ${validateClass}`;
+    feedbackElement.innerHTML = `${errorMessage}`;
+  }
+};
+const onchangeFullName = (value, checkedFullName) => {
+  const trimValue = value.trim();
+  const singleValue = trimValue.replace(/ /g, "");
+  console.log(singleValue);
+  validName = /^[A-Za-z]+$/;
+  if (singleValue == "") {
+    setError(fullName, "error", errorMessageFullName, "Name is required");
+    return false;
+  } else if (!validName.test(singleValue)) {
+    setError(
+      fullName,
+      "error",
+      errorMessageFullName,
+      "Please Enter Valid Name"
+    );
+    return false;
+  } else {
+    setError(fullName, "success", errorMessageFullName, "");
+    return true;
+  }
+};
+
+const onchangeMobileNo = (value) => {
+  const trimValue = value.trim();
+  const singleValue = trimValue.replace(/ /g, "");
+  console.log(singleValue.length);
+  if (singleValue == "") {
+    setError(mobileNo, "error", errorMessageMobileNo, "Mobile No. is required");
+    return false;
+  } else if (singleValue.length === 10) {
+    console.log(true);
+
+    setError(mobileNo, "success", errorMessageMobileNo, "");
+    return true;
+  } else {
+    setError(
+      mobileNo,
+      "error",
+      errorMessageMobileNo,
+      "Please Enter Valid Mobile No."
+    );
+    return false;
+  }
+};
+const onchangeEmailId = (value) => {
+  const trimValue = value.trim();
+  const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (trimValue === "") {
+    setError(email, "error", errorMessageEmailId, "Email ID is required");
+    return false;
+  } else if (trimValue.match(mailformat)) {
+    setError(email, "success", errorMessageEmailId, "");
+    return true;
+  } else {
+    setError(
+      email,
+      "error",
+      errorMessageEmailId,
+      "Please Enter Valid Email ID"
+    );
+    return false;
+  }
+};
+const onchangeSubject = (value) => {
+  const trimValue = value.trim();
+  if (trimValue === "") {
+    setError(subject, "error", errorMessageSubject, "Subject is required");
+    return false;
+  } else {
+    setError(subject, "success", errorMessageSubject, "");
+    return true;
+  }
+};
+
+const clearErrorMessageHandler = () => {
+  errorMessageFullName.innerHTML = "";
+  errorMessageMobileNo.innerHTML = "";
+  errorMessageEmailId.innerHTML = "";
+  errorMessageSubject.innerHTML = "";
+};
+const onClearHandler = () => {
+  fullName.value = "";
+  mobileNo.value = "";
+  email.value = "";
+  subject.value = "";
+};
+const onCLickSubmit = (event) => {};
+const onSubmitFormHandler = (event) => {
+  event.preventDefault();
+  console.log({
+    fullName: fullName.value,
+    mobileNo: mobileNo.value,
+    emailId: email.value,
+    subject: subject.value,
+  });
+  onClearHandler();
+  clearErrorMessageHandler();
+};
+
+console.log(checkedEmailId, checkedFullName, checkedMobileNo, checkedSubject);
+
+const form = document.getElementById("form");
+form.addEventListener("submit", onSubmitFormHandler);
