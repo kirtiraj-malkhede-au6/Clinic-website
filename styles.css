@@ -556,6 +556,10 @@ footer {
   height: 15rem;
   width: 15rem;
 }
+.success-icon-box.active {
+  display: none;
+}
+
 .success-container .success-icon-box i {
   margin: 2rem;
   font-size: 11rem;
@@ -800,6 +804,7 @@ footer {
   .success-container {
     margin-top: 3rem;
     margin-inline: auto;
+    margin-bottom: 10rem;
     padding: 2rem;
     height: 38rem;
     width: 40rem;
@@ -823,6 +828,7 @@ footer {
   }
   .success-container {
     margin-top: 3rem;
+    margin-bottom: 10rem;
     margin-inline: 5vw;
     padding: 2rem;
     height: 38rem;

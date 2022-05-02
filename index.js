@@ -1,5 +1,6 @@
 const bodyID = document.body.id;
 const hamburger = document.querySelector(".hambuger-menu");
+const successIcon = document.querySelector(".success-icon-box");
 const navMenu = document.querySelector(".nav-link");
 const navlinkClose = document.querySelector(".menu-close-icon");
 const fullName = document.getElementById("fullname");
@@ -14,9 +15,11 @@ const submitBtn = document.getElementById("submit-btn");
 let checkedFullName, checkedMobileNo, checkedEmailId, checkedSubject;
 
 hamburger.addEventListener("click", () => {
+  successIcon.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
 navlinkClose.addEventListener("click", () => {
+  successIcon.classList.remove("active");
   navMenu.classList.remove("active");
   console.log("clicked");
 });
