@@ -797,6 +797,13 @@ footer {
   .profile-content {
     align-items: center;
   }
+  .success-container {
+    margin-top: 3rem;
+    margin-inline: auto;
+    padding: 2rem;
+    height: 38rem;
+    width: 40rem;
+  }
 }
 @media (max-width: 575.98px) {
   #images {
@@ -813,5 +820,12 @@ footer {
   }
   .footer-container a i {
     font-size: 2.5rem;
+  }
+  .success-container {
+    margin-top: 3rem;
+    margin-inline: 5vw;
+    padding: 2rem;
+    height: 38rem;
+    width: 90vw;
   }
 }

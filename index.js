@@ -243,20 +243,29 @@ const onClearHandler = () => {
   email.value = "";
   subject.value = "";
 };
+const clearClassName = () => {
+  fullName.className = "input";
+  mobileNo.className = "input";
+  email.className = "input";
+  subject.className = "textarea";
+};
 const onCLickSubmit = (event) => {};
 const onSubmitFormHandler = (event) => {
   event.preventDefault();
+
   console.log({
     fullName: fullName.value,
     mobileNo: mobileNo.value,
     emailId: email.value,
     subject: subject.value,
   });
+  location.replace("https://chiroclinic.netlify.app/submit.html");
   onClearHandler();
   clearErrorMessageHandler();
+  clearClassName();
 };
 
-console.log(checkedEmailId, checkedFullName, checkedMobileNo, checkedSubject);
+// console.log(checkedEmailId, checkedFullName, checkedMobileNo, checkedSubject);
 
 const form = document.getElementById("form");
 form.addEventListener("submit", onSubmitFormHandler);
