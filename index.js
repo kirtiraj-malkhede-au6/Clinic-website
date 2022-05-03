@@ -14,16 +14,16 @@ const submitBtn = document.getElementById("submit-btn");
 const icon = document.getElementById("icon-success");
 
 hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
   if (bodyID === "submit" || bodyID === "home") {
     icon.classList.add("active");
   }
-  navMenu.classList.toggle("active");
 });
 navlinkClose.addEventListener("click", () => {
+  navMenu.classList.remove("active");
   if (bodyID === "submit" || bodyID === "home") {
     icon.classList.remove("active");
   }
-  navMenu.classList.remove("active");
 });
 
 const photoGallery = [
