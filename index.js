@@ -15,13 +15,13 @@ const icon = document.getElementById("icon-success");
 
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
-  if (bodyID === "submit" || bodyID === "home") {
+  if (bodyID === "submit") {
     icon.classList.add("active");
   }
 });
 navlinkClose.addEventListener("click", () => {
   navMenu.classList.remove("active");
-  if (bodyID === "submit" || bodyID === "home") {
+  if (bodyID === "submit") {
     icon.classList.remove("active");
   }
 });
