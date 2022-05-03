@@ -741,7 +741,7 @@ footer {
   }
   .form-container form {
     justify-content: flex-start;
-    gap: 3rem;
+    gap: 1rem;
     padding-bottom: 4rem;
     padding-top: 2rem;
   }

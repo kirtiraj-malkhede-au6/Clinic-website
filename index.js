@@ -1,6 +1,5 @@
 const bodyID = document.body.id;
 const hamburger = document.querySelector(".hambuger-menu");
-const successIcon = document.querySelector(".success-icon-box");
 const navMenu = document.querySelector(".nav-link");
 const navlinkClose = document.querySelector(".menu-close-icon");
 const fullName = document.getElementById("fullname");
@@ -12,16 +11,19 @@ const errorMessageMobileNo = document.getElementById("error-mobileNo");
 const errorMessageEmailId = document.getElementById("error-emailId");
 const errorMessageSubject = document.getElementById("error-subject");
 const submitBtn = document.getElementById("submit-btn");
-let checkedFullName, checkedMobileNo, checkedEmailId, checkedSubject;
+const icon = document.getElementById("icon-success");
 
 hamburger.addEventListener("click", () => {
-  successIcon.classList.toggle("active");
+  if (bodyID === "submit" || bodyID === "home") {
+    icon.classList.add("active");
+  }
   navMenu.classList.toggle("active");
 });
 navlinkClose.addEventListener("click", () => {
-  successIcon.classList.remove("active");
+  if (bodyID === "submit" || bodyID === "home") {
+    icon.classList.remove("active");
+  }
   navMenu.classList.remove("active");
-  console.log("clicked");
 });
 
 const photoGallery = [
@@ -74,6 +76,7 @@ const galleryList = () => {
   }
   return;
 };
+
 galleryList();
 
 const treatmentData = [
@@ -270,5 +273,7 @@ const onSubmitFormHandler = (event) => {
 
 // console.log(checkedEmailId, checkedFullName, checkedMobileNo, checkedSubject);
 
-const form = document.getElementById("form");
-form.addEventListener("submit", onSubmitFormHandler);
+if (bodyID === "home" || bodyID === "contact") {
+  const form = document.getElementById("form");
+  form.addEventListener("submit", onSubmitFormHandler);
+}

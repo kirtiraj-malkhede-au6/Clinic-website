@@ -76,43 +76,66 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
         <div class="form-container">
-          <form action="action_page.php">
+          <form class="form" id="form">
             <div>
               <label for="fullname">Name</label>
               <input
+                class="input"
                 type="text"
-                id="fillname"
+                id="fullname"
                 name="fullname"
                 placeholder="Your name.."
+                value=""
+                onchange="onchangeFullName(this.value)"
               />
             </div>
+            <small id="error-fullname"></small>
+
             <div>
               <label for="mobileNo">Mobile No.</label>
               <input
+                class="input"
                 type="number"
                 id="mobileNo"
-                name="mobileNumber"
+                name="mobileNo"
                 placeholder="Your mobile number"
+                value=""
+                onchange="onchangeMobileNo(this.value)"
               />
             </div>
+            <small id="error-mobileNo"></small>
             <div>
               <label for="emailid">Email ID</label>
               <input
+                class="input"
                 type="email"
                 id="emailid"
                 name="emailid"
                 placeholder="Your Email Id"
+                value=""
+                onchange="onchangeEmailId(this.value)"
               />
             </div>
+            <small id="error-emailId"></small>
             <div>
               <label for="subject">Subject</label>
               <textarea
+                class="textarea"
                 id="subject"
                 name="subject"
                 placeholder="Write something.."
+                value=""
+                onchange="onchangeSubject(this.value)"
               ></textarea>
             </div>
-            <input class="enq-submit-btn" type="submit" value="Submit" />
+            <small id="error-subject"></small>
+            <input
+              onclick="onCLickSubmit()"
+              id="submit-btn"
+              class="enq-submit-btn"
+              type="submit"
+              value="Submit"
+            />
           </form>
         </div>
       </div>
